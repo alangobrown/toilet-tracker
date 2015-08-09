@@ -50,10 +50,6 @@ lastState = lastState.json();
 print (lastState['currentState']);
 
 
-# print('The last state for bog {} is {}', format(bogId,lastState))
-
-lastState = random.randint(0,1);
-
 #Loop every 1s
 while True:
 

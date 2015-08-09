@@ -1,12 +1,6 @@
 # toilet-tracker
-<<<<<<< HEAD
-
-
 To copy from source machine to Pi
 
-sudo scp  -r toilet-agent pi@192.168.1.83:~/toilet-agent
+sudo scp  -r toilet-agent username@XXX.XXX.XXX.XXX:~/toilet-agent
 
 Need to run chmod -R 777 toliet-agent on the Pi first
-
-=======
->>>>>>> d4ff9ebce4983679f7ba3651cb922c93549946c8

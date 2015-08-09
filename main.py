@@ -1,12 +1,26 @@
+#Main script acting as a bog agent.
+#Need to connect a tilt switch or other input to GPIO
+
 import time;
 import random;
 import sys;
 import requests;
 import configparser;
 import json;
-
+import platform;
 
 #import GPIO # The raspberry Pi GPIO drivers
+#This little coniditional switches to use a mock GPIO library when developing off the Pi
+if platform.platform()[0:5] == 'Linux':
+	import RPi.GPIO as GPIO
+else:
+	#import RPi.GPIO as GPIO
+	import mockGPIO as GPIO 
+#-------------------------------
+
+
+
+
 
 config = configparser.ConfigParser();
 

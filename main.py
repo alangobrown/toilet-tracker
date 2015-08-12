@@ -12,6 +12,7 @@ import platform;
 #import GPIO # The raspberry Pi GPIO drivers
 #This little coniditional switches to use a mock GPIO library when developing off the Pi
 if platform.platform()[0:5] == 'Linux':
+	print('This is running on Linux, so going to use the real GPIO library');
 	import RPi.GPIO as GPIO
 else:
 	#import RPi.GPIO as GPIO

@@ -19,15 +19,10 @@ else:
 	import mockGPIO as GPIO 
 #-------------------------------
 
-
-
-
-
 config = configparser.ConfigParser();
 
 config.read('config.ini')
 
-print('test python app')
 print('Python running on version ' + sys.version);
 print('Hopefully this is 3.x');
 
@@ -63,7 +58,7 @@ while True:
 	GPIO.setup(switchPin,GPIO.IN)
 	
 	currentState = GPIO.input(switchPin)
-	print('currentState is ' + currentState);
+	print('currentState is {}'.format(currentState),{});
 	#currentState = random.randint(0,1);  #vertical
 	
 

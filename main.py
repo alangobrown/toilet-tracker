@@ -56,7 +56,17 @@ while True:
 	
 	print('Checking state of tilt switch');
 	#Check the currentState of the tilt switch
-	currentState = random.randint(0,1);  #vertical
+	
+	switchPin = 23
+	GPIO.setmode(GPIO.BCM)
+	GPIO.setup(switchPin,GPIO.IN)
+	
+	currentState = GPIO.input(switchPin)
+	print('currentState is ' + currentState);
+	#currentState = random.randint(0,1);  #vertical
+	
+
+
 	if currentState==1:
 		currentState = 'open'
 	else:
